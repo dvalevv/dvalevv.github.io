@@ -1,0 +1,41 @@
+- check console for no errors
+
+- change the name not to be as flutter_web3_web
+
+- change the tab name not to be Cool ass dapp
+
+- change the icon to FTM Stable logo
+
+-------
+
+Cases:
+
+metamask not installed  -->  "Please install metamask"
+($ ethereum != null)
+
+connect wallet
+($ await ethereum!.requestAccount() )
+($ currentAddress.isNotEmpty )
+
+different network --> switch network
+($ await ethereum!.getChainId() )
+($  )
+
+on network change --> page refresh-*
+
+listen to events - for transaction result => https://docs.ethers.io/v5/getting-started/
+
+--- on all checked ---
+
+Views:
+
+- pending rewards
+- total rewards
+- circulating supply
+- liquidity
+
+Write:
+
+- approve
+- migrate
+- claim
