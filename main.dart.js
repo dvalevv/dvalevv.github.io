@@ -51693,7 +51693,7 @@ b7(){this.bH()
 A.bX("State init")
 this.WQ()
 this.hw(0)},
-V(b4,b5){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4,a5=this,a6=null,a7="-------------------",a8="Print ur native token balance in console",a9="Approve max (v1 contract)",b0="Swap (migration contract)",b1="Total rewards (v2 distributor contract)",b2="Unclaimed rewards (v2 distributor contract)",b3="Claim rewards (v2 distributor contract)"
+V(b4,b5){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4,a5=this,a6=null,a7="-------------------",a8="Print ur native token balance in console",a9="Approve max (v1 contract) - write",b0="Swap (migration contract) - write",b1="Total rewards (v2 distributor contract) - read",b2="Unclaimed rewards (v2 distributor contract) - read",b3="Claim rewards (v2 distributor contract) - write"
 A.bX("rebuild")
 s=A.dc(a6,20,a6)
 r=A.at(18,255,255,255)
@@ -51809,15 +51809,16 @@ $1(a){A.bX("transaction completed")
 A.bX(a)},
 $S:48}
 A.a0_.prototype={
-$0(){var s=0,r=A.a0(t.H),q=this,p
+$0(){var s=0,r=A.a0(t.H),q=this,p,o
 var $async$$0=A.V(function(a,b){if(a===1)return A.Y(b,r)
-while(true)switch(s){case 0:p=q.a
-s=A.bB()!=null&&p.d.length!==0&&p.e===250?2:3
+while(true)switch(s){case 0:o=q.a
+s=A.bB()!=null&&o.d.length!==0&&o.e===250?2:3
 break
-case 2:p="ethereum" in window.window||"BinanceChain" in window.window?new A.is(new ethers.providers.Web3Provider(t.bh.a(A.bB()).a)):null
-p.toString
+case 2:p=A.a(["function totalDistributed() public view returns (uint256)"],t.s)
+o="ethereum" in window.window||"BinanceChain" in window.window?new A.is(new ethers.providers.Web3Provider(t.bh.a(A.bB()).a)):null
+o.toString
 s=4
-return A.a2(A.yl(u.j,null,p).d6(0,"totalDistributed",B.b6,t.ju).aQ(0,new A.a_U(),t.P),$async$$0)
+return A.a2(A.yl(u.j,p,o).d6(0,"totalDistributed",B.b6,t.ju).aQ(0,new A.a_U(),t.P),$async$$0)
 case 4:case 3:return A.Z(null,r)}})
 return A.a_($async$$0,r)},
 $S:9}
@@ -51825,15 +51826,16 @@ A.a_U.prototype={
 $1(a){A.bX("total distributed - "+a.h(0))},
 $S:108}
 A.a00.prototype={
-$0(){var s=0,r=A.a0(t.H),q=this,p,o
+$0(){var s=0,r=A.a0(t.H),q=this,p,o,n
 var $async$$0=A.V(function(a,b){if(a===1)return A.Y(b,r)
-while(true)switch(s){case 0:o=q.a
-s=A.bB()!=null&&o.d.length!==0&&o.e===250?2:3
+while(true)switch(s){case 0:n=q.a
+s=A.bB()!=null&&n.d.length!==0&&n.e===250?2:3
 break
-case 2:p="ethereum" in window.window||"BinanceChain" in window.window?new A.is(new ethers.providers.Web3Provider(t.bh.a(A.bB()).a)):null
-p.toString
+case 2:p=A.a(["function getUnpaidEarnings(address shareholder) public view returns (uint256)"],t.s)
+o="ethereum" in window.window||"BinanceChain" in window.window?new A.is(new ethers.providers.Web3Provider(t.bh.a(A.bB()).a)):null
+o.toString
 s=4
-return A.a2(A.yl(u.j,null,p).d6(0,"getUnpaidEarnings",[o.d],t.ju).aQ(0,new A.a_T(),t.P),$async$$0)
+return A.a2(A.yl(u.j,p,o).d6(0,"getUnpaidEarnings",[n.d],t.ju).aQ(0,new A.a_T(),t.P),$async$$0)
 case 4:case 3:return A.Z(null,r)}})
 return A.a_($async$$0,r)},
 $S:9}
